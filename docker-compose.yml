@@ -1,0 +1,20 @@
+version: '2'
+services:
+  runner94:
+    build:
+      context: .
+      dockerfile: 9.4.Dockerfile
+    image: pg_sample_94
+    links:
+      - pg94
+  pg94:
+    image: postgres:9.4
+  runner95:
+    build:
+      context: .
+      dockerfile: 9.5.Dockerfile
+    image: pg_sample_95
+    links:
+      - pg95
+  pg95:
+    image: postgres:9.5
