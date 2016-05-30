@@ -6,4 +6,6 @@ docker-compose up -d pg94
 docker-compose run runner94
 docker-compose up -d pg95
 docker-compose run runner95
+docker-compose up -d pg96
+docker-compose run runner96
 ```

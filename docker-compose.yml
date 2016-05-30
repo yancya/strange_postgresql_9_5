@@ -16,5 +16,14 @@ services:
     image: pg_sample_95
     links:
       - pg95
+  pg96:
+    image: postgres:9.6
+  runner96:
+    build:
+      context: .
+      dockerfile: 9.6.Dockerfile
+    image: pg_sample_96
+    links:
+      - pg96
   pg95:
-    image: postgres:9.5
+    image: postgres:9.6

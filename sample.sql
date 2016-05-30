@@ -33,6 +33,8 @@ SELECT COUNT(DISTINCT temp_values.id)
   JOIN temp_targets USING (target_id);
 -- 25400
 
+set enable_mergejoin to off;
+
 SELECT COUNT(DISTINCT temp_values.id)
   FROM temp_values
   JOIN temp_targets USING (target_id)
