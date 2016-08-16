@@ -7,8 +7,6 @@ services:
     image: pg_sample_94
     links:
       - pg94
-  pg94:
-    image: postgres:9.4
   runner95:
     build:
       context: .
@@ -16,6 +14,19 @@ services:
     image: pg_sample_95
     links:
       - pg95
+  runner954:
+    build:
+      context: .
+      dockerfile: 9.5.4.Dockerfile
+    image: pg_sample_954
+    links:
+      - pg954
+  pg94:
+    image: postgres:9.4
+  pg95:
+    image: postgres:9.5
+  pg954:
+    image: postgres:9.5.4
   pg96:
     image: postgres:9.6
   runner96:
@@ -25,5 +36,15 @@ services:
     image: pg_sample_96
     links:
       - pg96
-  pg95:
-    image: postgres:9.6
+  runnerdev:
+    build:
+      context: .
+      dockerfile: runner.dev.Dockerfile
+    image: pg_sample_dev
+    links:
+      - pgdev
+  pgdev:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    image: postgresql:dev
