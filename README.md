@@ -12,6 +12,10 @@ docker-compose up -d pg95
 sleep 5
 docker-compose run runner95
 
+docker-compose up -d pg954
+sleep 5
+docker-compose run runner954
+
 docker-compose up -d pg96
 sleep 5
 docker-compose run runner96
